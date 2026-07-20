@@ -30,12 +30,21 @@ Note: original ask was 1:20:00. Reassessed against actual fitness data (21:40 pa
 - **Wants strength training built directly into the plan** (not bolted on) — specifically targeting knees and hips to support running volume.
 
 ## Key numbers / zones
-- **Easy pace:** 8:30-9:00 min/mile
+- **Easy pace:** 8:30-9:00 min/mile (target pace matches actual training paces, but see HR note below)
 - **Recent race time:** parkrun 5k, 21:40 (Saturday 2026-07-18)
-- Heart-rate zones, threshold pace, and other benchmarks: not established yet — will be estimated/refined from Garmin/Strava once connected. Athlete wears their device 24/7, so sleep, steps, HR, and activity data should all be available.
+- **Observed max HR:** 206 bpm (from Garmin activity data, not lab tested — treat as a floor, true max could be slightly higher)
+- **Estimated HR zones** (from observed max, 2026-07-20):
+  - Z1 Recovery: <124 bpm
+  - Z2 Easy/Aerobic: 124-144 bpm — most volume should live here
+  - Z3 Steady/Tempo: 144-165 bpm
+  - Z4 Threshold: 165-185 bpm
+  - Z5 VO2max: 185+ bpm
+- **Threshold pace estimate:** ~4:35-4:40/km (7:23-7:30/mi), derived from 5k race pace
+- **Flag:** actual "easy" runs in Garmin are averaging 151-166 bpm (Z3, not Z2) at correct easy paces — aerobic base isn't built yet, so easy pace currently costs tempo-level effort. Coaching should prioritize closing this gap (slow down further or hold pace and let HR come down over weeks) before adding intensity.
+- **Garmin VO2 max:** 57 (as of 2026-07-20), trending flat/slightly up over past 4-6 weeks. Garmin's algorithmic race predictions (e.g. 1:36:35 half) are built from this and limited data — treat as an optimistic ceiling, not a target, until backed by more race-pace evidence.
 
 ## Plan status
-No training plan has been built yet. Athlete wants Garmin connected first so the plan accounts for real HR zones, sleep, steps, and recovery data from day one rather than being built on estimates and reworked later. Do not create anything in training/ until the watch is connected and athlete gives the go-ahead.
+Garmin is connected and is the live data source (activities, HR, sleep, steps, training load). No training plan has been built yet — still waiting on alignment on goals before building training/.
 
 ## What this athlete wants from their coach
 - A full dedicated plan built on complete health context — sleep, steps, daily exertion, stress — not just logged activities/workouts
