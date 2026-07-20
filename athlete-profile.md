@@ -32,7 +32,7 @@ Note: original ask was 1:20:00. Reassessed against actual fitness data (21:40 pa
 ## Key numbers / zones
 - **Easy pace:** 8:30-9:00 min/mile
 - **Recent race time:** parkrun 5k, 21:40 (Saturday 2026-07-18)
-- Heart-rate zones, threshold pace, and other benchmarks: not established yet — will be estimated/refined from Garmin/Strava once connected. Athlete wears their device 24/7, so sleep, steps, HR, and activity data should all be available.
+- Heart-rate zones, threshold pace, and other benchmarks: not established yet — will be estimated/refined from Garmin once connected. Athlete wears their device 24/7, so sleep, steps, HR, and activity data should all be available.
 
 ## Plan status
 No training plan has been built yet. Athlete wants Garmin connected first so the plan accounts for real HR zones, sleep, steps, and recovery data from day one rather than being built on estimates and reworked later. Do not create anything in training/ until the watch is connected and athlete gives the go-ahead.
