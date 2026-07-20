@@ -2,7 +2,7 @@
   "mcpServers": {
     "garmin_mcp": {
       "command": "uvx",
-      "args": ["--python", "3.12", "--from", "git+https://github.com/Taxuspt/garmin_mcp", "garmin-mcp"]
+      "args": ["--python", "3.12", "--from", "git+https://github.com/Taxuspt/garmin_mcp@0.1.0", "garmin-mcp"]
     }
   }
 }
