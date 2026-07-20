@@ -30,6 +30,7 @@ Note: original ask was 1:20:00. Reassessed against actual fitness data (21:40 pa
 - **Wants strength training built directly into the plan** (not bolted on) — specifically targeting knees and hips to support running volume.
 
 ## Key numbers / zones
+- **Units: miles, not km** (confirmed 2026-07-20) — all distances/paces in project docs should lead with miles.
 - **Easy pace:** 8:30-9:00 min/mile (target pace matches actual training paces, but see HR note below)
 - **Recent race time:** parkrun 5k, 21:40 (Saturday 2026-07-18)
 - **Observed max HR:** 206 bpm (from Garmin activity data, not lab tested — treat as a floor, true max could be slightly higher)
@@ -39,7 +40,7 @@ Note: original ask was 1:20:00. Reassessed against actual fitness data (21:40 pa
   - Z3 Steady/Tempo: 144-165 bpm
   - Z4 Threshold: 165-185 bpm
   - Z5 VO2max: 185+ bpm
-- **Threshold pace estimate:** ~4:35-4:40/km (7:23-7:30/mi), derived from 5k race pace
+- **Threshold pace estimate:** ~7:23-7:30/mi (4:35-4:40/km), derived from 5k race pace
 - **Flag:** actual "easy" runs in Garmin are averaging 151-166 bpm (Z3, not Z2) at correct easy paces — aerobic base isn't built yet, so easy pace currently costs tempo-level effort. Coaching should prioritize closing this gap (slow down further or hold pace and let HR come down over weeks) before adding intensity.
 - **Garmin VO2 max:** 57 (as of 2026-07-20), trending flat/slightly up over past 4-6 weeks. Garmin's algorithmic race predictions (e.g. 1:36:35 half) are built from this and limited data — treat as an optimistic ceiling, not a target, until backed by more race-pace evidence.
 
