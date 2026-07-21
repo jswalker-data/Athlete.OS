@@ -116,6 +116,66 @@ about his life has clearly changed.)
   re-derive, and it's fine to show the km figure in parentheses once
   where it materially helps (e.g. matching a race's official distance)
   but miles leads everywhere.
+- **Strength sessions must be fully specified, not a placeholder.**
+  "Strength AM" on its own is not a finished plan — every strength
+  session in the week must name the actual exercises, sets/reps (or
+  hold time), tempo/cues, and total duration, so Josh can open the file
+  and go straight into it with no re-explaining needed (2026-07-22).
+  Use the **Strength session menu** below rather than inventing new
+  exercises each week, so the sessions stay consistent and trackable.
+- **Strength and running can share a day.** Josh is open to doing a
+  strength session and a run on the same day whenever his schedule
+  allows it (2026-07-22) — this is a real option for fitting sessions
+  in around a blackout day or a busy stretch, not just a fallback.
+  Still respect effort ordering (strength after an easy run is fine;
+  avoid stacking strength right before a quality/long/race effort on
+  the same day) and don't default to combining just to compress the
+  week — only do it when it actually solves a real constraint that
+  week.
+
+## Strength session menu
+
+Bodyweight only, no gym (per `athlete-profile.md`), ~25-30 minutes,
+targeting knee/hip resilience per Josh's explicit ask. Alternate A/B
+week to week so the same session doesn't repeat back-to-back. Present
+whichever is used in full in the week file — exercises, sets/reps,
+tempo, and a one-line cue each — not just the label.
+
+**Session A — Glute & hip stability**
+1. Glute bridge — 3×12, 2s pause at the top. *Cue: squeeze glutes, not
+   lower back.*
+2. Single-leg glute bridge — 2×10 each side. *Cue: keep hips level,
+   don't let the free side drop.*
+3. Clamshells (band-free) — 2×15 each side. *Cue: slow, controlled,
+   no rocking the pelvis.*
+4. Side-lying leg raises — 2×12 each side. *Cue: leg stays in line
+   with the body, don't swing it forward.*
+5. Standing single-leg balance — 2×30s each side (close eyes for the
+   last 10s if it's easy). *Cue: this is boring on purpose — it's
+   building the stability that protects the hip under fatigue.*
+6. Side plank — 2×20-30s each side. *Cue: hips lifted, straight line
+   shoulder-to-ankle.*
+
+**Session B — Quad/patellar control, calf, core**
+1. Spanish squat or wall sit — 3×30-40s. *Cue: knees tracking over
+   toes, weight through the heels — this is the patellar-tendon
+   builder, don't rush it.*
+2. Step-downs (off a low step/stair) — 2×10 each side, slow. *Cue:
+   control the descent, don't just drop — this is eccentric control,
+   the part that actually protects the knee on downhills.*
+3. Single-leg calf raise — 3×12 each side. *Cue: full range, pause at
+   the top.*
+4. Bird-dog — 2×10 each side. *Cue: opposite arm/leg, keep hips
+   square, don't rotate.*
+5. Dead bug — 2×10 each side. *Cue: lower back stays flat on the
+   floor throughout.*
+6. Standing hip flexor stretch + calf stretch — 30s each side, to
+   close out.
+
+Both sessions are AM-only per Josh's Thursday-evening hard no and
+general morning preference, and neither should be scheduled directly
+before a quality/long-run/race effort the same day if combined with a
+run — do the run first, strength after.
 
 ## Process
 
@@ -160,7 +220,11 @@ Sequencing rules, all non-negotiable:
   (bad sleep stretch, a known conflict, an already-hard Saturday) gives
   a real reason — say the reason if you move it.
 - Strength sessions AM only, never Thursday evening, targeting knee/hip
-  per the profile ask.
+  per the profile ask. Pull the actual exercises/sets/reps from the
+  **Strength session menu** above — never leave a strength session as
+  just a label. Combining a strength session with a run on the same day
+  is fine when it solves a real scheduling constraint (run first,
+  strength after).
 - Respect the 3-5 sessions/week comfortable range unless Josh says
   otherwise this week.
 - Total weekly volume ≤ last actual week's volume × 1.10, AND ≤ whatever
