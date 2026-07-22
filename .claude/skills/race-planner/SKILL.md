@@ -22,8 +22,10 @@ guessing — don't build a dossier for the wrong event.
 
 Don't stop at the official race website. For each area below, search
 broadly and fetch real pages (not just search-result snippets) before
-writing anything. Every factual claim in the dossier needs a source link
-next to it. If two sources disagree (e.g. elevation-gain figures, start
+writing anything. Every non-Garmin factual claim in the dossier needs a
+source link next to it. For Garmin-derived metrics, explicitly label them
+as coming from Garmin and include the pull date (and time if available).
+If two sources disagree (e.g. elevation-gain figures, start
 vs. finish location across route-change years), report both and say so —
 don't silently pick one. If something is genuinely uncertain or you
 couldn't verify it, say that plainly rather than smoothing it over.
