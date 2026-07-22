@@ -162,8 +162,7 @@ Sources: [ealinghalfmarathon.com](https://ealinghalfmarathon.com/),
 
 ## 5. Josh's readiness — matched against what this course actually demands
 
-Pulled live from Garmin, 2026-07-22 (see full snapshot in conversation;
-key numbers below).
+Pulled live from Garmin, 2026-07-22; key numbers below.
 
 **Current state:** ~8 weeks back into running after a long layoff.
 Recent 21:40 5k parkrun PR (2026-07-18, 7:02/mi, avg HR 171/max 196 —
