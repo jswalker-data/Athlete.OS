@@ -245,16 +245,7 @@ of the entire remaining 9.5 weeks — every other gap found here (pacing
 discipline, hill exposure) is secondary to actually earning the
 distance safely.
 
-**A / B / C goals (locked 2026-07-22):**
-- **A (stretch):** sub-1:40:00 — upside case, only in play if the long
-  run closes cleanly on schedule and the aerobic-efficiency gap keeps
-  closing at the current rate.
-- **B (realistic target):** 1:42:00 — the standing locked target from
-  `athlete-profile.md`, and the honest goal given current fitness plus
-  9.5 weeks to close a real distance gap.
-- **C (floor):** finish healthy — time is explicitly secondary to this
-  given the June knee injury and ongoing hip history. A finish with no
-  joint flare-up outranks any specific clock time.
+**A / B / C goals (locked 2026-07-22):** see Section 8 (kept at the end of the dossier).
 
 ---
 
