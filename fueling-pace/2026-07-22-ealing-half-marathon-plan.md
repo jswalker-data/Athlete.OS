@@ -109,7 +109,7 @@ No phone, so this runs on mile markers / watch, not app alerts.
 |---|---|---|
 | ~31:08 | Mile 4 | Water station + **Gel 1** |
 | ~42:48 | Mile 5.5 | Water station |
-| ~58:22 | Mile 7.5 | Oranges (course-provided, optional top-up) |
+| ~58:22 | Mile 7.5 | Oranges (course-provided, optional; skip if sticking to gels only) |
 | ~70:03 | Mile 9 | Water station + **Gel 2** — timed deliberately right before the mile 10-11 fade zone |
 | ~101:57 | Mile 13.1 | Finish, ~1:41:57 |
 | — | Flask | Sip through miles 1-9 to hit ~0.5L/hr; course water stops don't cover it alone |
