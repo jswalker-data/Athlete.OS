@@ -109,8 +109,8 @@ elevation profile, rather than pretending the course is flat.
 - `athlete-profile.md` — get body weight. If it's not there, ask Josh
   directly rather than guessing (a body-weight guess corrupts every formula
   downstream). It's also fine to check Garmin body composition/weigh-in data
-  as a quick cross-check if profile weight looks stale — Garmin is the
-  source of truth for body metrics per `CLAUDE.md`.
+  as a quick cross-check if profile weight looks stale — `CLAUDE.md` treats
+  Garmin as the source of truth for training data (read-only), so use it as a cross-check rather than a persisted reference.
 - The race dossier in `races/` for the target race (default to the goal
   race in `athlete-profile.md` if Josh doesn't name one; ask if neither
   exists — don't build a plan for the wrong race). Pull: distance, expected
