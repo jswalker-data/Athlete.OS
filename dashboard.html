@@ -88,8 +88,10 @@
   .hero-race { font-size: 15px; color: var(--ink-2); margin-top: 8px; }
   .hero-race b { color: var(--ink); }
   .hero-right { text-align: right; min-width: 220px; }
-  .hero-target { font-size: 34px; font-weight: 800; color: var(--purple); }
+  .hero-target { font-size: 56px; font-weight: 800; color: var(--purple); line-height: 1; letter-spacing: -0.02em; }
   .hero-target-label { font-size: 12px; color: var(--ink-muted); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 4px; }
+  .hero-likelihood { font-size: 13px; color: var(--warning); font-weight: 700; margin-top: 8px; }
+  .hero-likelihood span { color: var(--ink-muted); font-weight: 500; }
   .progress-track { width: 220px; height: 6px; border-radius: 3px; background: var(--hairline); margin-top: 14px; overflow: hidden; margin-left: auto; }
   .progress-fill { height: 100%; background: var(--purple); border-radius: 3px; }
   .progress-cap { font-size: 12px; color: var(--ink-muted); margin-top: 6px; }
@@ -199,8 +201,28 @@
     <div class="hero-right">
       <p class="hero-target-label">Target time</p>
       <div class="hero-target">1:42:00</div>
+      <div class="hero-likelihood">~12% likely <span>at current trajectory — see below</span></div>
       <div class="progress-track"><div class="progress-fill" style="width:18.6%"></div></div>
       <div class="progress-cap">18.6% through the 10-week build</div>
+    </div>
+  </div>
+
+  <!-- Row: race time prediction -->
+  <div class="row row-3">
+    <div class="card pr-tile">
+      <p class="pr-dist">Likelihood of 1:42:00</p>
+      <div class="pr-time">~12%</div>
+      <p class="pr-note flag">Real chance with clean training + smart pacing, but the honest read: currently a stretch, not the expected outcome. Range ~10-15%.</p>
+    </div>
+    <div class="card pr-tile">
+      <p class="pr-dist">If raced today</p>
+      <div class="pr-time">1:56:00</div>
+      <p class="pr-note">Speed-ceiling models (Riegel/VDOT/calibrated-Garmin) discounted by the real HR-drift "endurance tax" seen in your longest efforts. Range 1:50-2:05.</p>
+    </div>
+    <div class="card pr-tile">
+      <p class="pr-dist">If you stick to the plan</p>
+      <div class="pr-time">1:52:00</div>
+      <p class="pr-note">Assumes the long-run build to plan.md's 9.9mi peak + realistic (not perfect) adherence. Range 1:46-2:00. Full math: <code>races/2026-08-02-time-prediction.md</code>.</p>
     </div>
   </div>
 
@@ -455,6 +477,10 @@
       <div class="skill-tile">
         <div class="skill-name">/regenerate-dashboard</div>
         <div class="skill-desc">Rebuilds this snapshot</div>
+      </div>
+      <div class="skill-tile">
+        <div class="skill-name">/time-predicter</div>
+        <div class="skill-desc">Predicts your race finish time</div>
       </div>
     </div>
   </div>
