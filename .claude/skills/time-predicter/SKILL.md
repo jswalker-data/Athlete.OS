@@ -118,7 +118,7 @@ He doesn't yet (see below), so this is not the final number.
 **Apply the endurance-depth discount.** Look at the real HR/pace pattern
 from his longest actual efforts (both the training-block long runs and
 any pre-block long effort). If HR climbs materially while pace holds or
-increases — aerobic decoubling — quantify the % HR rise from early to
+increases — aerobic decoupling — quantify the % HR rise from early to
 late in that effort and treat a comparable magnitude as a real "tax" on
 the speed-ceiling estimate for the full race distance: a runner who
 can't hold flat HR/pace for 6 miles will pay a bigger tax over 13.1.
