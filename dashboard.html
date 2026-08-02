@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Athlete OS — Josh</title>
+<style>
+  :root {
+    color-scheme: dark;
+    --page:        #0d0d0d;
+    --surface:     #17171a;
+    --surface-2:   #1e1e22;
+    --ink:         #ffffff;
+    --ink-2:       #c3c2b7;
+    --ink-muted:   #8a8985;
+    --hairline:    #2c2c2e;
+    --baseline:    #3a3a3d;
+    --purple:      #9085e9;
+    --purple-dim:  #4a4185;
+    --purple-glow: rgba(144,133,233,0.16);
+    --good:        #0ca30c;
+    --warning:     #fab219;
+    --serious:     #ec835a;
+    --critical:    #d03b3b;
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      color-scheme: light;
+      --page:        #f9f9f7;
+      --surface:     #fcfcfb;
+      --surface-2:   #f1f0ed;
+      --ink:         #0b0b0b;
+      --ink-2:       #52514e;
+      --ink-muted:   #898781;
+      --hairline:    #e1e0d9;
+      --baseline:    #c3c2b7;
+      --purple:      #4a3aa7;
+      --purple-dim:  #cfc9f2;
+      --purple-glow: rgba(74,58,167,0.10);
+      --good:        #0ca30c;
+      --warning:     #fab219;
+      --serious:     #ec835a;
+      --critical:    #d03b3b;
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; padding: 0;
+    background: var(--page);
+    color: var(--ink);
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  body { padding: 32px 20px 80px; }
+  .wrap { max-width: 1080px; margin: 0 auto; }
+
+  /* ---------- header ---------- */
+  header { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 28px; flex-wrap: wrap; gap: 8px; }
+  .brand { display: flex; align-items: baseline; gap: 10px; }
+  .brand .mark { width: 10px; height: 10px; border-radius: 2px; background: var(--purple); display: inline-block; transform: translateY(-2px); }
+  h1 { font-size: 20px; font-weight: 700; letter-spacing: 0.02em; margin: 0; text-transform: uppercase; }
+  .asof { font-size: 13px; color: var(--ink-muted); }
+
+  /* ---------- generic card ---------- */
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--hairline);
+    border-radius: 14px;
+    padding: 22px 24px;
+  }
+  .label {
+    font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--ink-muted); margin: 0 0 12px;
+  }
+
+  /* ---------- hero: race countdown ---------- */
+  .hero {
+    background: linear-gradient(135deg, var(--purple-glow), transparent 60%), var(--surface);
+    border: 1px solid var(--hairline);
+    border-radius: 18px;
+    padding: 30px 32px;
+    margin-bottom: 16px;
+    display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px;
+  }
+  .hero-left .label { color: var(--purple); }
+  .hero-num { font-size: 84px; font-weight: 800; line-height: 1; letter-spacing: -0.03em; color: var(--ink); }
+  .hero-num span { font-size: 28px; font-weight: 600; color: var(--ink-2); margin-left: 8px; }
+  .hero-race { font-size: 15px; color: var(--ink-2); margin-top: 8px; }
+  .hero-race b { color: var(--ink); }
+  .hero-right { text-align: right; min-width: 220px; }
+  .hero-target { font-size: 34px; font-weight: 800; color: var(--purple); }
+  .hero-target-label { font-size: 12px; color: var(--ink-muted); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 4px; }
+  .progress-track { width: 220px; height: 6px; border-radius: 3px; background: var(--hairline); margin-top: 14px; overflow: hidden; margin-left: auto; }
+  .progress-fill { height: 100%; background: var(--purple); border-radius: 3px; }
+  .progress-cap { font-size: 12px; color: var(--ink-muted); margin-top: 6px; }
+
+  /* ---------- row grids ---------- */
+  .row { display: grid; gap: 16px; margin-bottom: 16px; }
+  .row-2 { grid-template-columns: 1fr 1fr; }
+  .row-3 { grid-template-columns: repeat(3, 1fr); }
+  @media (max-width: 760px) { .row-2, .row-3 { grid-template-columns: 1fr; } }
+
+  /* ---------- readiness ---------- */
+  .readiness-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 6px 14px; border-radius: 999px;
+    font-weight: 700; font-size: 14px;
+    background: rgba(250,178,25,0.14); color: var(--warning);
+    border: 1px solid rgba(250,178,25,0.35);
+  }
+  .readiness-badge .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--warning); }
+  .readiness-score { font-size: 42px; font-weight: 800; margin: 14px 0 2px; }
+  .readiness-score span { font-size: 16px; color: var(--ink-muted); font-weight: 600; }
+  .readiness-why { font-size: 13.5px; color: var(--ink-2); line-height: 1.55; margin-top: 10px; }
+  .readiness-why b { color: var(--ink); }
+
+  /* ---------- this week's sessions ---------- */
+  .sess-list { display: flex; flex-direction: column; gap: 0; }
+  .sess-row {
+    display: grid; grid-template-columns: 84px 1fr auto; gap: 14px; align-items: center;
+    padding: 11px 0; border-bottom: 1px solid var(--hairline);
+  }
+  .sess-row:last-child { border-bottom: none; }
+  .sess-day { font-size: 12.5px; font-weight: 700; color: var(--ink-muted); text-transform: uppercase; letter-spacing: 0.04em; }
+  .sess-day.today { color: var(--purple); }
+  .sess-desc { font-size: 14px; color: var(--ink-2); }
+  .sess-desc b { color: var(--ink); font-weight: 600; }
+  .sess-tag { font-size: 11px; font-weight: 700; padding: 3px 9px; border-radius: 999px; text-transform: uppercase; letter-spacing: 0.03em; white-space: nowrap; }
+  .tag-done { background: rgba(12,163,12,0.14); color: var(--good); }
+  .tag-today { background: var(--purple-glow); color: var(--purple); }
+  .tag-next { background: var(--surface-2); color: var(--ink-muted); }
+
+  /* ---------- charts ---------- */
+  .chart-card svg { width: 100%; height: auto; display: block; overflow: visible; }
+  .bar { fill: var(--purple-dim); }
+  .bar.current { fill: var(--purple); }
+  .bar:hover { fill: var(--ink); }
+  .bar-val { font-size: 11px; fill: var(--ink-muted); font-weight: 600; }
+  .bar-val.current { fill: var(--purple); }
+  .axis-lbl { font-size: 10.5px; fill: var(--ink-muted); }
+  .paceline { fill: none; stroke: var(--purple); stroke-width: 2; }
+  .pacept { fill: var(--surface); stroke: var(--purple); stroke-width: 2; }
+  .pacept:hover { fill: var(--purple); }
+  .pace-direct { font-size: 11px; fill: var(--ink); font-weight: 700; }
+  .chart-sub { font-size: 12px; color: var(--ink-muted); margin-top: -6px; margin-bottom: 14px; }
+
+  /* ---------- PR tiles ---------- */
+  .pr-tile .pr-dist { font-size: 12px; font-weight: 700; letter-spacing: 0.06em; color: var(--purple); text-transform: uppercase; }
+  .pr-time { font-size: 30px; font-weight: 800; margin: 8px 0 4px; }
+  .pr-note { font-size: 12.5px; color: var(--ink-muted); line-height: 1.5; }
+  .pr-note.flag { color: var(--warning); }
+
+  /* ---------- coaching ---------- */
+  .coach-overview { font-size: 14.5px; color: var(--ink-2); line-height: 1.6; margin-bottom: 18px; }
+  .coach-overview b { color: var(--ink); }
+  .insight-list { display: flex; flex-direction: column; gap: 14px; margin-bottom: 20px; }
+  .insight { padding-left: 16px; border-left: 2px solid var(--purple-dim); }
+  .insight-fw { font-size: 11px; font-weight: 700; color: var(--purple); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 4px; }
+  .insight-body { font-size: 13.5px; color: var(--ink-2); line-height: 1.55; }
+  .insight-body b { color: var(--ink); }
+  .tips { background: var(--surface-2); border-radius: 10px; padding: 16px 18px; }
+  .tips .label { color: var(--purple); margin-bottom: 10px; }
+  .tips ul { margin: 0; padding-left: 18px; }
+  .tips li { font-size: 13.5px; color: var(--ink-2); line-height: 1.6; margin-bottom: 6px; }
+  .tips li:last-child { margin-bottom: 0; }
+  .tips b { color: var(--ink); }
+
+  /* ---------- skills ---------- */
+  .skills-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }
+  @media (max-width: 760px) { .skills-grid { grid-template-columns: repeat(2, 1fr); } }
+  .skill-tile {
+    background: var(--surface-2); border: 1px solid var(--hairline); border-radius: 10px;
+    padding: 14px 14px 16px; text-align: left;
+  }
+  .skill-name { font-family: ui-monospace, "SF Mono", monospace; font-size: 12.5px; font-weight: 700; color: var(--purple); }
+  .skill-desc { font-size: 12px; color: var(--ink-muted); margin-top: 6px; line-height: 1.45; }
+
+  footer { text-align: center; font-size: 12px; color: var(--ink-muted); margin-top: 36px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="brand">
+      <span class="mark"></span>
+      <h1>Athlete OS</h1>
+    </div>
+    <div class="asof">Josh · Friday, 31 July 2026</div>
+  </header>
+
+  <!-- HERO: race countdown -->
+  <div class="hero">
+    <div class="hero-left">
+      <p class="label">Goal race</p>
+      <div class="hero-num">58<span>days to go</span></div>
+      <div class="hero-race"><b>Ealing Half Marathon</b> · 27 Sep 2026</div>
+    </div>
+    <div class="hero-right">
+      <p class="hero-target-label">Target time</p>
+      <div class="hero-target">1:42:00</div>
+      <div class="progress-track"><div class="progress-fill" style="width:15.9%"></div></div>
+      <div class="progress-cap">15.9% through the 10-week build</div>
+    </div>
+  </div>
+
+  <!-- Row: readiness + this week -->
+  <div class="row row-2">
+    <div class="card">
+      <p class="label">Today's readiness call</p>
+      <div class="readiness-badge"><span class="dot"></span>GO EASY</div>
+      <div class="readiness-score">45<span>/100 · LOW</span></div>
+      <div class="readiness-why">
+        Not rest, not go hard. <b>Body battery hit HIGH (76) overnight and HRV rebounded to 118ms</b> —
+        real same-day signs recovery from this week's illness is genuine. But the rolling composite
+        (HRV weekly avg still 41ms vs your 60-84ms normal band) hasn't caught up yet. Plan: easy
+        15-20min shakeout, HR capped 130-140bpm, or skip if it doesn't feel right once moving.
+      </div>
+    </div>
+
+    <div class="card">
+      <p class="label">This week's sessions</p>
+      <div class="sess-list">
+        <div class="sess-row">
+          <span class="sess-day">Mon–Thu</span>
+          <span class="sess-desc">Rest — <b>illness</b> (sore throat, headache, stomach pain)</span>
+          <span class="sess-tag tag-done">Done</span>
+        </div>
+        <div class="sess-row">
+          <span class="sess-day today">Fri (Today)</span>
+          <span class="sess-desc">Easy shakeout jog, <b>15-20min, HR cap 130-140bpm</b></span>
+          <span class="sess-tag tag-today">Go easy</span>
+        </div>
+        <div class="sess-row">
+          <span class="sess-day">Sat</span>
+          <span class="sess-desc">Parkrun — <b>easy jog only</b>, no effort, ~140-145bpm</span>
+          <span class="sess-tag tag-next">Upcoming</span>
+        </div>
+        <div class="sess-row">
+          <span class="sess-day">Sun</span>
+          <span class="sess-desc">Long run, <b>~3-3.5mi</b>, hard HR ceiling 150-155bpm</span>
+          <span class="sess-tag tag-next">Upcoming</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Row: weekly volume + recent paces -->
+  <div class="row row-2">
+    <div class="card chart-card">
+      <p class="label">Weekly volume trend</p>
+      <p class="chart-sub">miles per week, last 7 weeks</p>
+      <svg viewBox="0 0 420 190" preserveAspectRatio="xMidYMid meet">
+        <!-- baseline -->
+        <line x1="0" y1="150" x2="420" y2="150" stroke="var(--baseline)" stroke-width="1"/>
+        <!--
+          weeks (mon-start), miles:
+          Jun15 4.06 | Jun22 5.54 | Jun29 9.61 | Jul06 9.49 | Jul13 3.10 | Jul20 12.78 | Jul27 0.0 (in progress)
+          scale: max 12.78 -> bar height 120px
+        -->
+        <g>
+          <rect class="bar" x="10"  y="112" width="40" height="38"><title>Wk of Jun 15: 4.06 mi</title></rect>
+          <text class="bar-val" x="30" y="105" text-anchor="middle">4.1</text>
+          <text class="axis-lbl" x="30" y="168" text-anchor="middle">Jun 15</text>
+
+          <rect class="bar" x="65"  y="98" width="40" height="52"><title>Wk of Jun 22: 5.54 mi</title></rect>
+          <text class="bar-val" x="85" y="91" text-anchor="middle">5.5</text>
+          <text class="axis-lbl" x="85" y="168" text-anchor="middle">Jun 22</text>
+
+          <rect class="bar" x="120" y="60" width="40" height="90"><title>Wk of Jun 29: 9.61 mi</title></rect>
+          <text class="bar-val" x="140" y="53" text-anchor="middle">9.6</text>
+          <text class="axis-lbl" x="140" y="168" text-anchor="middle">Jun 29</text>
+
+          <rect class="bar" x="175" y="61" width="40" height="89"><title>Wk of Jul 06: 9.49 mi</title></rect>
+          <text class="bar-val" x="195" y="54" text-anchor="middle">9.5</text>
+          <text class="axis-lbl" x="195" y="168" text-anchor="middle">Jul 06</text>
+
+          <rect class="bar" x="230" y="121" width="40" height="29"><title>Wk of Jul 13: 3.10 mi</title></rect>
+          <text class="bar-val" x="250" y="114" text-anchor="middle">3.1</text>
+          <text class="axis-lbl" x="250" y="168" text-anchor="middle">Jul 13</text>
+
+          <rect class="bar current" x="285" y="30" width="40" height="120"><title>Wk of Jul 20: 12.78 mi</title></rect>
+          <text class="bar-val current" x="305" y="23" text-anchor="middle">12.8</text>
+          <text class="axis-lbl" x="305" y="168" text-anchor="middle">Jul 20</text>
+
+          <rect class="bar current" x="340" y="146" width="40" height="4" rx="2"><title>Wk of Jul 27: 0 mi so far — illness</title></rect>
+          <text class="bar-val current" x="360" y="139" text-anchor="middle">0*</text>
+          <text class="axis-lbl" x="360" y="168" text-anchor="middle">Jul 27</text>
+        </g>
+      </svg>
+      <p class="chart-sub" style="margin-top:10px;">*This week in progress — illness Mon-Thu, easy re-entry from today</p>
+    </div>
+
+    <div class="card chart-card">
+      <p class="label">Recent paces</p>
+      <p class="chart-sub">min/mile per run, last 9 runs (higher = faster)</p>
+      <svg viewBox="0 0 420 190" preserveAspectRatio="xMidYMid meet">
+        <line x1="0" y1="150" x2="420" y2="150" stroke="var(--baseline)" stroke-width="1"/>
+        <!--
+          pace sec/mi, inverted so faster = higher on chart
+          Jul01 8:43(523s) | Jul04 7:34(454s) | Jul05 8:47(527s) | Jul08 8:40(520s) | Jul11 8:22(502s)
+          Jul18 7:02(422s) | Jul21 11:03(663s) | Jul25 7:34(454s) | Jul26 8:49(529s)
+          range plotted 400-670s mapped to y 150(slow)->20(fast)
+        -->
+        <polyline class="paceline" points="
+          20,84
+          65,38
+          110,90
+          155,82
+          200,64
+          245,20
+          290,150
+          335,38
+          380,86
+        "/>
+        <circle class="pacept" cx="20"  cy="84"  r="4"><title>Jul 01 · Base · 8:43/mi</title></circle>
+        <circle class="pacept" cx="65"  cy="38"  r="4"><title>Jul 04 · Hilly (70m gain) · 7:34/mi</title></circle>
+        <circle class="pacept" cx="110" cy="90"  r="4"><title>Jul 05 · Base · 8:47/mi</title></circle>
+        <circle class="pacept" cx="155" cy="82"  r="4"><title>Jul 08 · Base · 8:40/mi</title></circle>
+        <circle class="pacept" cx="200" cy="64"  r="4"><title>Jul 11 · Tempo · 8:22/mi</title></circle>
+        <circle class="pacept" cx="245" cy="20"  r="5"><title>Jul 18 · Parkrun · 7:02/mi (fastest)</title></circle>
+        <text class="pace-direct" x="245" y="12" text-anchor="middle">7:02</text>
+        <circle class="pacept" cx="290" cy="150" r="4"><title>Jul 21 · Easy Z2 (deliberately slow) · 11:03/mi</title></circle>
+        <circle class="pacept" cx="335" cy="38"  r="4"><title>Jul 25 · Parkrun · 7:34/mi</title></circle>
+        <circle class="pacept" cx="380" cy="86"  r="5"><title>Jul 26 · Long run · 8:49/mi</title></circle>
+        <text class="pace-direct" x="380" y="106" text-anchor="middle">8:49</text>
+
+        <text class="axis-lbl" x="20"  y="168" text-anchor="middle">Jul01</text>
+        <text class="axis-lbl" x="65"  y="168" text-anchor="middle">Jul04</text>
+        <text class="axis-lbl" x="110" y="168" text-anchor="middle">Jul05</text>
+        <text class="axis-lbl" x="155" y="168" text-anchor="middle">Jul08</text>
+        <text class="axis-lbl" x="200" y="168" text-anchor="middle">Jul11</text>
+        <text class="axis-lbl" x="245" y="168" text-anchor="middle">Jul18</text>
+        <text class="axis-lbl" x="290" y="168" text-anchor="middle">Jul21</text>
+        <text class="axis-lbl" x="335" y="168" text-anchor="middle">Jul25</text>
+        <text class="axis-lbl" x="380" y="168" text-anchor="middle">Jul26</text>
+      </svg>
+      <p class="chart-sub" style="margin-top:10px;">Jul 21's 11:03/mi was deliberate — the cleanest Z2-discipline run on record, not a bad day</p>
+    </div>
+  </div>
+
+  <!-- PRs -->
+  <div class="row row-3">
+    <div class="card pr-tile">
+      <p class="pr-dist">5K</p>
+      <div class="pr-time">21:40</div>
+      <p class="pr-note">Parkrun, 18 Jul 2026 — your best recorded effort so far.</p>
+    </div>
+    <div class="card pr-tile">
+      <p class="pr-dist">10K</p>
+      <div class="pr-time">—</div>
+      <p class="pr-note flag">Not yet run continuously. Closest so far: 6.0mi (~9.7km) long runs.</p>
+    </div>
+    <div class="card pr-tile">
+      <p class="pr-dist">Half Marathon</p>
+      <div class="pr-time">2:03:28</div>
+      <p class="pr-note flag">Training run, not a race (11 May 2026) — goal pace for Ealing is 1:42:00.</p>
+    </div>
+  </div>
+
+  <!-- Coaching -->
+  <div class="row" style="grid-template-columns: 1fr;">
+    <div class="card">
+      <p class="label">Where you stand</p>
+      <p class="coach-overview">
+        You're <b>58 days out from Ealing</b>, coming off your first illness of this build (Jul 27-30)
+        rather than an injury or overtraining event — Garmin's own numbers back that up (training-load
+        factor 100% VERY_GOOD, recovery factor 99% GOOD the whole time). Before the illness hit, the
+        week of Jul 20 was your best of the build: 12.8 miles, both strength sessions done, and your
+        cleanest-ever Z2 easy run. The job for the next few days is protecting that trajectory through
+        a clean re-entry, not erasing it by rushing back.
+      </p>
+
+      <p class="label" style="margin-top:4px;">What your data shows</p>
+      <div class="insight-list">
+        <div class="insight">
+          <div class="insight-fw">Van den Broek — structural patience</div>
+          <div class="insight-body">
+            Your easy runs are still landing at <b>151-179bpm (Z3), not the 124-144bpm Z2</b> the pace
+            target should produce. The aerobic base isn't fully built yet — this is the gap to close
+            before any race-specific intensity gets added, not a pace problem.
+          </div>
+        </div>
+        <div class="insight">
+          <div class="insight-fw">Bakken traffic-light rule</div>
+          <div class="insight-body">
+            <b>No joint pain reported</b> through the illness or the week before it. Given your knee/hip
+            history, that's the one signal that overrides everything else — and right now it's clear.
+          </div>
+        </div>
+        <div class="insight">
+          <div class="insight-fw">Roche — "days off, no shame"</div>
+          <div class="insight-body">
+            The Jul 27-30 gap is <b>recovery, not regression</b>. Body battery hit HIGH (76) and HRV
+            rebounded to 118ms overnight — real signs the corner's been turned, even while the slower
+            weekly composite (45/100) still reads LOW.
+          </div>
+        </div>
+        <div class="insight">
+          <div class="insight-fw">Long-run integrity flag</div>
+          <div class="insight-body">
+            Jul 26's long run drifted <b>149→185bpm at a flat pace, nearly double the prescribed
+            distance</b> — the exact mid-effort pattern named in your coaching philosophy as the old
+            injury mechanism, and very likely the earliest sign of the illness that hit the next day.
+            Worth watching closely once volume climbs again.
+          </div>
+        </div>
+      </div>
+
+      <div class="tips">
+        <p class="label">Coaching tips for right now</p>
+        <ul>
+          <li><b>Today:</b> easy shakeout, 15-20min, HR capped 130-140bpm — or skip it entirely if it doesn't feel right once moving. No obligation to finish once started.</li>
+          <li><b>Saturday parkrun:</b> jog it, don't race it. ~140-145bpm, no chasing pace even if legs feel good.</li>
+          <li><b>Sunday long run:</b> the HR ceiling (150-155bpm) is the rule this week, not the distance — stop or walk the moment it breaks, regardless of how far in you are.</li>
+          <li><b>Next week's real number</b> gets set once this week's post-illness data is in, not before.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Skills -->
+  <div class="card">
+    <p class="label">Skills — run with one command</p>
+    <div class="skills-grid">
+      <div class="skill-tile">
+        <div class="skill-name">/plan-my-week</div>
+        <div class="skill-desc">Builds the coming training week</div>
+      </div>
+      <div class="skill-tile">
+        <div class="skill-name">/weekly-review</div>
+        <div class="skill-desc">Reviews the week just gone</div>
+      </div>
+      <div class="skill-tile">
+        <div class="skill-name">/recovery-check</div>
+        <div class="skill-desc">Daily readiness &amp; injury-risk call</div>
+      </div>
+      <div class="skill-tile">
+        <div class="skill-name">/race-planner</div>
+        <div class="skill-desc">Builds a race dossier</div>
+      </div>
+      <div class="skill-tile">
+        <div class="skill-name">/fuel-and-pace</div>
+        <div class="skill-desc">Race-day fueling &amp; pacing plan</div>
+      </div>
+    </div>
+  </div>
+
+  <footer>Generated 31 Jul 2026 from Garmin + training/ + races/ + health/ — rebuild by asking your coach to refresh the dashboard.</footer>
+</div>
+</body>
+</html>
