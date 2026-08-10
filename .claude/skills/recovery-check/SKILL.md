@@ -39,7 +39,7 @@ a precise, standalone predictor.
 [Global Performance Insights: Has ACWR Been Debunked?](https://www.globalperformanceinsights.com/post/has-the-acute-chronic-workload-ratio-been-debunked))
 → **Applied here:** compute ACWR from Josh's **own rolling load history**
 (`get_training_load_trend`), never a fixed generic mileage number — this
-matches how `/plan-my-week` already treats the 10% rule. Specifically watch
+matches how `/plan-my-week` already treats the volume guardrails. Specifically watch
 for a **low base followed by rapid resumption** (a gap of several days, then
 training on 3+ consecutive days, or jumping straight back to prior volume) —
 this is Josh's own named overreach pattern and the exact mechanism behind his

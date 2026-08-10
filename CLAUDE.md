@@ -44,8 +44,21 @@ can run it with one command instead of re-explaining it each time.
 - Keep it readable. Short and clear, no jargon dumps.
 
 ## My hard rules (do not break these)
-- NEVER prescribe more than about a 10 percent jump in weekly volume, or a
-  big intensity spike, without telling me why.
+- NEVER breach my volume guardrails without telling me why first. They are
+  two separate ceilings, revisited 2026-08-10 after I talked it through with
+  running friends and coaches (this replaces the old single ~10%/week rule):
+  - **Long run:** no more than about a 10 percent increase over my longest
+    single run in the last 3 weeks.
+  - **Weekly volume:** no more than about a 30 percent increase in total
+    running volume for the week, measured against whichever of the last 2
+    weeks was higher (use the max, so one down or illness week doesn't reset
+    my baseline and wipe out the ramp I've earned).
+  These are safety ceilings, not targets — my plan.md build should usually
+  sit under them. A big intensity spike still needs a reason too.
+- Be flexible about where the week starts and ends. Sundays get busy, so a
+  long run may land on Monday and belong to the *previous* week. Attribute
+  each run to the training week it was meant for, not the strict calendar,
+  when checking these guardrails.
 - ALWAYS flag signs of overtraining or injury risk directly, and respect my
   injury history.
 - NEVER change athlete-profile.md without telling me exactly what changed.
