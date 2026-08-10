@@ -131,6 +131,7 @@
   .tag-done { background: rgba(12,163,12,0.14); color: var(--good); }
   .tag-today { background: var(--purple-glow); color: var(--purple); }
   .tag-next { background: var(--surface-2); color: var(--ink-muted); }
+  .tag-race { background: rgba(236,131,90,0.16); color: var(--serious); }
 
   /* ---------- charts ---------- */
   .chart-card svg { width: 100%; height: auto; display: block; overflow: visible; }
@@ -188,22 +189,22 @@
       <span class="mark"></span>
       <h1>Athlete OS</h1>
     </div>
-    <div class="asof">Josh · Snapshot: Sunday, 2 August 2026</div>
+    <div class="asof">Josh · Snapshot: Monday, 10 August 2026</div>
   </header>
 
   <!-- HERO: race countdown -->
   <div class="hero">
     <div class="hero-left">
       <p class="label">Goal race</p>
-      <div class="hero-num">56<span>days to go</span></div>
+      <div class="hero-num">48<span>days to go</span></div>
       <div class="hero-race"><b>Ealing Half Marathon</b> · 27 Sep 2026</div>
     </div>
     <div class="hero-right">
       <p class="hero-target-label">Target time</p>
       <div class="hero-target">1:42:00</div>
-      <div class="hero-likelihood">~12% likely <span>at current trajectory — see below</span></div>
-      <div class="progress-track"><div class="progress-fill" style="width:18.6%"></div></div>
-      <div class="progress-cap">18.6% through the 10-week build</div>
+      <div class="hero-likelihood">~18% likely <span>trending up on the rebuilt plan — see below</span></div>
+      <div class="progress-track"><div class="progress-fill" style="width:30.4%"></div></div>
+      <div class="progress-cap">30% through the 10-week build</div>
     </div>
   </div>
 
@@ -211,18 +212,18 @@
   <div class="row row-3">
     <div class="card pr-tile">
       <p class="pr-dist">Likelihood of 1:42:00</p>
-      <div class="pr-time">~12%</div>
-      <p class="pr-note flag">Real chance with clean training + smart pacing, but the honest read: currently a stretch, not the expected outcome. Range ~10-15%.</p>
+      <div class="pr-time">~18%</div>
+      <p class="pr-note flag">Up from ~12% a week ago (~15% before the plan rewrite). A real chance with clean training + disciplined pacing — but the honest read holds: still a stretch, not the expected outcome. Range ~15-22%.</p>
     </div>
     <div class="card pr-tile">
       <p class="pr-dist">If raced today</p>
-      <div class="pr-time">1:56:00</div>
-      <p class="pr-note">Speed-ceiling models (Riegel/VDOT/calibrated-Garmin) discounted by the real HR-drift "endurance tax" seen in your longest efforts. Range 1:50-2:05.</p>
+      <div class="pr-time">1:54:00</div>
+      <p class="pr-note">Down 2 min from 1:56:00 — the endurance-tax discount shrank after the Aug 10 flat-HR 8-miler. Speed-ceiling models discounted by real HR-drift durability. Range 1:49-2:00.</p>
     </div>
     <div class="card pr-tile">
       <p class="pr-dist">If you stick to the plan</p>
-      <div class="pr-time">1:52:00</div>
-      <p class="pr-note">Assumes the long-run build to plan.md's 9.9mi peak + realistic (not perfect) adherence. Range 1:46-2:00. Full math: <code>races/2026-08-02-time-prediction.md</code>.</p>
+      <div class="pr-time">1:49:00</div>
+      <p class="pr-note">Improved on the rebuilt plan (v2) — long run now peaks ~11.5mi (was 9.9), closing more of the endurance gap. Realistic (not perfect) adherence. Range 1:44-1:55. Full math: <code>races/2026-08-10-time-prediction.md</code>.</p>
     </div>
   </div>
 
@@ -230,28 +231,33 @@
   <div class="row row-2">
     <div class="card">
       <p class="label">Today's readiness</p>
-      <div class="readiness-badge"><span class="dot"></span>MODERATE</div>
-      <div class="readiness-score">62<span>/100 · up from 45 last week</span></div>
+      <div class="readiness-badge"><span class="dot"></span>MODERATE · WELL RESTED</div>
+      <div class="readiness-score">72<span>/100 · up from 62 last week</span></div>
       <div class="readiness-why">
-        The illness bounce-back is holding. <b>HRV weekly average is back to 55ms (GOOD, 87%)</b> and
-        <b>training-load/recovery both read 99-100% GOOD</b> — the only lagging factor is sleep history
-        (54%, MODERATE), which is catching up on its own. Sunday's long run is already banked for the
-        week (see below) — this reading is the input for how next week (Aug 3-9) starts, not a call
-        for today.
+        Best recovery profile on record. <b>HRV weekly average 89ms (98%, GOOD — highest yet)</b>,
+        <b>recovery 99% and training load 100% VERY_GOOD</b>, and last night's sleep scored 81 GOOD (7.4h).
+        The only softer factors are stress- and sleep-history (both 54%, MODERATE), lagging the strong
+        recent nights. Today's 8-mile long run is already banked into last week's ledger — this reading
+        is why this week can carry a raced parkrun.
       </div>
     </div>
 
     <div class="card">
-      <p class="label">Next week's sessions — Aug 3-9</p>
+      <p class="label">This week's sessions — Aug 10-16</p>
       <div class="sess-list">
         <div class="sess-row">
-          <span class="sess-day">Mon</span>
-          <span class="sess-desc">Strength A (AM) — <b>glute &amp; hip stability</b></span>
-          <span class="sess-tag tag-next">Upcoming</span>
+          <span class="sess-day today">Mon</span>
+          <span class="sess-desc">Long run, <b>8.0mi walk-run</b> — avg 144bpm, no drift</span>
+          <span class="sess-tag tag-done">Done</span>
         </div>
         <div class="sess-row">
           <span class="sess-day">Tue</span>
-          <span class="sess-desc">Easy run, <b>~1.0mi</b> shakeout, Z2 124-144bpm</span>
+          <span class="sess-desc">Rest <b>(recover)</b> — optional easy walk/mobility, no running</span>
+          <span class="sess-tag tag-next">Upcoming</span>
+        </div>
+        <div class="sess-row">
+          <span class="sess-day">Wed</span>
+          <span class="sess-desc">Strength A (AM) — <b>glute &amp; hip stability</b></span>
           <span class="sess-tag tag-next">Upcoming</span>
         </div>
         <div class="sess-row">
@@ -260,13 +266,18 @@
           <span class="sess-tag tag-next">Upcoming</span>
         </div>
         <div class="sess-row">
-          <span class="sess-day">Sat</span>
-          <span class="sess-desc">Parkrun — <b>controlled effort</b>, ~140-150bpm</span>
+          <span class="sess-day">Fri</span>
+          <span class="sess-desc">Rest</span>
           <span class="sess-tag tag-next">Upcoming</span>
         </div>
         <div class="sess-row">
+          <span class="sess-day">Sat</span>
+          <span class="sess-desc">Parkrun — <b>race it</b> 🟢 (leash off, fitness gauge)</span>
+          <span class="sess-tag tag-race">Race</span>
+        </div>
+        <div class="sess-row">
           <span class="sess-day">Sun</span>
-          <span class="sess-desc">Long run, <b>~4.8mi</b>, HR ceiling 150-155bpm</span>
+          <span class="sess-desc">Long run <b>~8mi</b>, easy Z2, HR-capped — cuttable to 6</span>
           <span class="sess-tag tag-next">Upcoming</span>
         </div>
       </div>
@@ -279,44 +290,44 @@
       <p class="label">Weekly volume trend</p>
       <p class="chart-sub">miles per week, last 7 weeks</p>
       <svg viewBox="0 0 420 190" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Weekly volume trend chart">
-        <!-- baseline -->
         <line x1="0" y1="150" x2="420" y2="150" stroke="var(--baseline)" stroke-width="1"/>
         <!--
           weeks (mon-start), miles:
-          Jun15 4.07 | Jun22 5.54 | Jun29 9.61 | Jul06 9.50 | Jul13 3.10 | Jul20 12.78 | Jul27 6.65
-          scale: max 12.78 -> bar height 120px
+          Jun22 5.54 | Jun29 9.61 | Jul06 9.50 | Jul13 3.10 | Jul20 12.78 | Jul27 6.65 | Aug03 14.96
+          Aug03 includes the long run that wrapped to Mon Aug 10 (flexible week edge).
+          scale: max 14.96 -> bar height 120px
         -->
         <g>
-          <rect class="bar" x="10"  y="112" width="40" height="38"><title>Wk of Jun 15: 4.07 mi</title></rect>
-          <text class="bar-val" x="30" y="105" text-anchor="middle">4.1</text>
-          <text class="axis-lbl" x="30" y="168" text-anchor="middle">Jun 15</text>
+          <rect class="bar" x="10"  y="106" width="40" height="44"><title>Wk of Jun 22: 5.54 mi</title></rect>
+          <text class="bar-val" x="30" y="99" text-anchor="middle">5.5</text>
+          <text class="axis-lbl" x="30" y="168" text-anchor="middle">Jun 22</text>
 
-          <rect class="bar" x="65"  y="98" width="40" height="52"><title>Wk of Jun 22: 5.54 mi</title></rect>
-          <text class="bar-val" x="85" y="91" text-anchor="middle">5.5</text>
-          <text class="axis-lbl" x="85" y="168" text-anchor="middle">Jun 22</text>
+          <rect class="bar" x="65"  y="73" width="40" height="77"><title>Wk of Jun 29: 9.61 mi</title></rect>
+          <text class="bar-val" x="85" y="66" text-anchor="middle">9.6</text>
+          <text class="axis-lbl" x="85" y="168" text-anchor="middle">Jun 29</text>
 
-          <rect class="bar" x="120" y="60" width="40" height="90"><title>Wk of Jun 29: 9.61 mi</title></rect>
-          <text class="bar-val" x="140" y="53" text-anchor="middle">9.6</text>
-          <text class="axis-lbl" x="140" y="168" text-anchor="middle">Jun 29</text>
+          <rect class="bar" x="120" y="74" width="40" height="76"><title>Wk of Jul 06: 9.50 mi</title></rect>
+          <text class="bar-val" x="140" y="67" text-anchor="middle">9.5</text>
+          <text class="axis-lbl" x="140" y="168" text-anchor="middle">Jul 06</text>
 
-          <rect class="bar" x="175" y="61" width="40" height="89"><title>Wk of Jul 06: 9.50 mi</title></rect>
-          <text class="bar-val" x="195" y="54" text-anchor="middle">9.5</text>
-          <text class="axis-lbl" x="195" y="168" text-anchor="middle">Jul 06</text>
+          <rect class="bar" x="175" y="125" width="40" height="25"><title>Wk of Jul 13: 3.10 mi</title></rect>
+          <text class="bar-val" x="195" y="118" text-anchor="middle">3.1</text>
+          <text class="axis-lbl" x="195" y="168" text-anchor="middle">Jul 13</text>
 
-          <rect class="bar" x="230" y="121" width="40" height="29"><title>Wk of Jul 13: 3.10 mi</title></rect>
-          <text class="bar-val" x="250" y="114" text-anchor="middle">3.1</text>
-          <text class="axis-lbl" x="250" y="168" text-anchor="middle">Jul 13</text>
+          <rect class="bar" x="230" y="47" width="40" height="103"><title>Wk of Jul 20: 12.78 mi (Bridge)</title></rect>
+          <text class="bar-val" x="250" y="40" text-anchor="middle">12.8</text>
+          <text class="axis-lbl" x="250" y="168" text-anchor="middle">Jul 20</text>
 
-          <rect class="bar" x="285" y="30" width="40" height="120"><title>Wk of Jul 20: 12.78 mi</title></rect>
-          <text class="bar-val" x="305" y="23" text-anchor="middle">12.8</text>
-          <text class="axis-lbl" x="305" y="168" text-anchor="middle">Jul 20</text>
+          <rect class="bar" x="285" y="97" width="40" height="53"><title>Wk of Jul 27: 6.65 mi — illness re-entry week</title></rect>
+          <text class="bar-val" x="305" y="90" text-anchor="middle">6.7</text>
+          <text class="axis-lbl" x="305" y="168" text-anchor="middle">Jul 27</text>
 
-          <rect class="bar current" x="340" y="88" width="40" height="62"><title>Wk of Jul 27: 6.64 mi — illness re-entry week</title></rect>
-          <text class="bar-val current" x="360" y="81" text-anchor="middle">6.6</text>
-          <text class="axis-lbl" x="360" y="168" text-anchor="middle">Jul 27</text>
+          <rect class="bar current" x="340" y="30" width="40" height="120"><title>Wk of Aug 03: 14.96 mi (incl. Mon Aug 10 long run, wrapped)</title></rect>
+          <text class="bar-val current" x="360" y="23" text-anchor="middle">15.0</text>
+          <text class="axis-lbl" x="360" y="168" text-anchor="middle">Aug 03</text>
         </g>
       </svg>
-      <p class="chart-sub" style="margin-top:10px;">Jul 27 week: illness Mon-Thu, clean 2-session re-entry (parkrun + long run) — both were controlled; long run held flat 141-145bpm with a brief max spike</p>
+      <p class="chart-sub" style="margin-top:10px;">Aug 03 week = 15.0mi incl. the 8mi long run wrapped to Mon Aug 10. Under the new 30%-over-2-week-max guardrail (ceiling 16.6mi); the long run itself was the one over-reach (+33% over the 3-week max).</p>
     </div>
 
     <div class="card chart-card">
@@ -326,44 +337,44 @@
         <line x1="0" y1="150" x2="420" y2="150" stroke="var(--baseline)" stroke-width="1"/>
         <!--
           pace sec/mi, inverted so faster = higher on chart
-          Jul05 8:47(527s) | Jul08 8:40(520s) | Jul11 8:22(502s) | Jul18 7:02(422s) | Jul21 11:03(663s)
-          Jul25 7:34(454s) | Jul26 8:49(529s) | Aug01 8:13(493s) | Aug02 9:27(567s)
-          range plotted 422-663s mapped to y 20(fast)->150(slow)
+          Jul18 7:03(423) | Jul21 11:04(664) | Jul25 7:34(454) | Jul26 8:48(529) | Aug01 8:13(493)
+          Aug02 9:26(566) | Aug04 10:25(625) | Aug08 7:37(457) | Aug10 9:08(549, walk-run)
+          range plotted 423-664s mapped to y 20(fast)->150(slow)
         -->
         <polyline class="paceline" points="
-          20,77
-          65,73
-          110,63
-          155,20
-          200,150
-          245,37
-          290,78
-          335,58
-          380,98
+          20,20
+          65,150
+          110,37
+          155,77
+          200,58
+          245,97
+          290,129
+          335,38
+          380,88
         "/>
-        <circle class="pacept" cx="20"  cy="77"  r="4"><title>Jul 05 · Base · 8:47/mi</title></circle>
-        <circle class="pacept" cx="65"  cy="73"  r="4"><title>Jul 08 · Base · 8:40/mi</title></circle>
-        <circle class="pacept" cx="110" cy="63"  r="4"><title>Jul 11 · Tempo · 8:22/mi</title></circle>
-        <circle class="pacept" cx="155" cy="20"  r="5"><title>Jul 18 · Parkrun · 7:02/mi (fastest)</title></circle>
-        <text class="pace-direct" x="155" y="12" text-anchor="middle">7:02</text>
-        <circle class="pacept" cx="200" cy="150" r="4"><title>Jul 21 · Easy Z2 (deliberately slow) · 11:03/mi</title></circle>
-        <circle class="pacept" cx="245" cy="37"  r="4"><title>Jul 25 · Parkrun · 7:34/mi</title></circle>
-        <circle class="pacept" cx="290" cy="78"  r="4"><title>Jul 26 · Long run (HR drifted 149→185bpm) · 8:49/mi</title></circle>
-        <circle class="pacept" cx="335" cy="58"  r="4"><title>Aug 01 · Parkrun, easy jog · 8:13/mi, avg HR 133bpm</title></circle>
-        <circle class="pacept" cx="380" cy="98"  r="5"><title>Aug 02 · Long run, HR held flat 141-145bpm · 9:27/mi</title></circle>
-        <text class="pace-direct" x="380" y="118" text-anchor="middle">9:27</text>
+        <circle class="pacept" cx="20"  cy="20"  r="5"><title>Jul 18 · Parkrun · 7:03/mi (fastest, 5K PB)</title></circle>
+        <text class="pace-direct" x="20" y="12" text-anchor="middle">7:03</text>
+        <circle class="pacept" cx="65"  cy="150" r="4"><title>Jul 21 · Easy Z2 (deliberately slow) · 11:04/mi, avg 138bpm</title></circle>
+        <circle class="pacept" cx="110" cy="37"  r="4"><title>Jul 25 · Parkrun · 7:34/mi, avg 175bpm</title></circle>
+        <circle class="pacept" cx="155" cy="77"  r="4"><title>Jul 26 · Long run (HR drifted 149→185bpm) · 8:48/mi</title></circle>
+        <circle class="pacept" cx="200" cy="58"  r="4"><title>Aug 01 · Parkrun, easy jog · 8:13/mi, avg 133bpm</title></circle>
+        <circle class="pacept" cx="245" cy="97"  r="4"><title>Aug 02 · Long run, HR flat 141bpm · 9:26/mi</title></circle>
+        <circle class="pacept" cx="290" cy="129" r="4"><title>Aug 04 · Easy Z2 · 10:25/mi, avg 133bpm</title></circle>
+        <circle class="pacept" cx="335" cy="38"  r="4"><title>Aug 08 · Parkrun · 7:37/mi, avg 155bpm (Z3)</title></circle>
+        <circle class="pacept" cx="380" cy="88"  r="5"><title>Aug 10 · Long run 8.0mi walk-run, HR flat 144bpm, no drift · 9:08/mi</title></circle>
+        <text class="pace-direct" x="380" y="108" text-anchor="middle">9:08</text>
 
-        <text class="axis-lbl" x="20"  y="168" text-anchor="middle">Jul05</text>
-        <text class="axis-lbl" x="65"  y="168" text-anchor="middle">Jul08</text>
-        <text class="axis-lbl" x="110" y="168" text-anchor="middle">Jul11</text>
-        <text class="axis-lbl" x="155" y="168" text-anchor="middle">Jul18</text>
-        <text class="axis-lbl" x="200" y="168" text-anchor="middle">Jul21</text>
-        <text class="axis-lbl" x="245" y="168" text-anchor="middle">Jul25</text>
-        <text class="axis-lbl" x="290" y="168" text-anchor="middle">Jul26</text>
-        <text class="axis-lbl" x="335" y="168" text-anchor="middle">Aug01</text>
-        <text class="axis-lbl" x="380" y="168" text-anchor="middle">Aug02</text>
+        <text class="axis-lbl" x="20"  y="168" text-anchor="middle">Jul18</text>
+        <text class="axis-lbl" x="65"  y="168" text-anchor="middle">Jul21</text>
+        <text class="axis-lbl" x="110" y="168" text-anchor="middle">Jul25</text>
+        <text class="axis-lbl" x="155" y="168" text-anchor="middle">Jul26</text>
+        <text class="axis-lbl" x="200" y="168" text-anchor="middle">Aug01</text>
+        <text class="axis-lbl" x="245" y="168" text-anchor="middle">Aug02</text>
+        <text class="axis-lbl" x="290" y="168" text-anchor="middle">Aug04</text>
+        <text class="axis-lbl" x="335" y="168" text-anchor="middle">Aug08</text>
+        <text class="axis-lbl" x="380" y="168" text-anchor="middle">Aug10</text>
       </svg>
-      <p class="chart-sub" style="margin-top:10px;">Aug 02's 9:27/mi is slower than Jul26's 8:49/mi on purpose — this time HR held flat at 141-145bpm the whole way instead of drifting to 185bpm</p>
+      <p class="chart-sub" style="margin-top:10px;">Aug 10's 8-miler (9:08/mi, walk-run) held HR flat at avg 144bpm with no drift — the standout. Aug 08's parkrun ran Z3 (155 avg); the leash comes off it this Saturday.</p>
     </div>
   </div>
 
@@ -372,12 +383,12 @@
     <div class="card pr-tile">
       <p class="pr-dist">5K</p>
       <div class="pr-time">21:40</div>
-      <p class="pr-note">Parkrun, 18 Jul 2026 — your best recorded effort so far.</p>
+      <p class="pr-note">Parkrun, 18 Jul 2026 — best recorded effort. Saturday's raced parkrun could replace it.</p>
     </div>
     <div class="card pr-tile">
-      <p class="pr-dist">10K</p>
-      <div class="pr-time">—</div>
-      <p class="pr-note flag">Not yet run continuously. Closest so far: 6.0mi (~9.7km) long runs.</p>
+      <p class="pr-dist">Longest run</p>
+      <div class="pr-time">8.0mi</div>
+      <p class="pr-note">10 Aug 2026, walk-run at flat 144bpm — your longest controlled effort of the block (the 13.5mi May run doesn't count; it caused the injury).</p>
     </div>
     <div class="card pr-tile">
       <p class="pr-dist">Half Marathon</p>
@@ -391,60 +402,59 @@
     <div class="card">
       <p class="label">Where you stand</p>
       <p class="coach-overview">
-        You're <b>56 days out from Ealing</b>, and the illness that hit Jul 27-30 is fully behind
-        you — HRV weekly average is back to 55ms (BALANCED, GOOD) and today's readiness reads
-        62/100 MODERATE, up from 45/100 LOW a week ago. More importantly, this week's re-entry
-        (parkrun + long run) proved something real: both sessions held their HR ceilings cleanly,
-        including the long run — the exact session that blew up the week before. That's the thing
-        to build on, not just the fact that volume is climbing again.
+        You're <b>48 days out from Ealing</b>, coming off the <b>best recovery week on record</b> — HRV
+        weekly average 89ms (highest yet), VO2max finally ticked to 58 after a month flat, ACWR 1.3
+        (optimal), and sleep trended up all week with no sub-5h nights. The headline session:
+        <b>an 8-mile walk-run held at 144bpm with zero drift</b> (lowest HR at the very end), in the heat —
+        the clearest sign yet that your #1 limiter, aerobic durability, is genuinely closing. Two honest
+        dings: strength was 1-of-2 (you skipped Session B in the week you jumped to 8mi), and the parkrun
+        ran Z3 again. Full detail in <code>reviews/2026-08-03.md</code>.
       </p>
 
       <p class="label" style="margin-top:4px;">What your data shows</p>
       <div class="insight-list">
         <div class="insight">
-          <div class="insight-fw">Long-run integrity — answered, not just noted</div>
+          <div class="insight-fw">Van den Broek — the base is closing</div>
           <div class="insight-body">
-            Jul 26's long run drifted <b>149→185bpm chasing distance at flat pace</b>. Aug 2's long run
-            held <b>141-145bpm flat across every autolap</b> at a shorter, ceiling-respecting distance
-            (3.51mi). This is the "effort caps distance" rule actually working under real conditions,
-            not just written down.
+            Three genuinely-Z2 runs running: Tue Aug 4 <b>133bpm</b>, the 8-mile long run <b>144bpm flat, no drift</b>,
+            after Aug 2's <b>141bpm</b>. The old 151-166bpm "easy" pattern is fading — the parkrun is now the
+            lone Z3 outlier, and that's by design. Best sustained stretch on this limiter all block.
           </div>
         </div>
         <div class="insight">
-          <div class="insight-fw">Van den Broek — structural patience</div>
+          <div class="insight-fw">The new guardrails — first real test, passed</div>
           <div class="insight-body">
-            Both runs this week landed near or inside Z2 (Aug 1 parkrun avg <b>133bpm</b>, Aug 2 long
-            run avg <b>141bpm</b>) — a real step down from the 151-179bpm Z3 pattern seen through most
-            of this build. One clean week isn't proof the gap is closed for good, but it's the best
-            stretch on record for this specific limiter.
+            Split caps did exactly their job: weekly volume (15.0mi) came in <b>under the 30%-over-2-week-max ceiling</b>
+            (16.6mi, anchored to the Bridge week not the illness week), while the <b>long run was flagged</b> — 8.0mi
+            is +33% over your 6.0mi three-week max. It isolated the one true injury-mechanism risk instead of panicking
+            about total mileage.
           </div>
         </div>
         <div class="insight">
-          <div class="insight-fw">Bakken traffic-light rule</div>
+          <div class="insight-fw">Bakken traffic-light — joints clear</div>
           <div class="insight-body">
-            <b>No joint pain reported</b> through the illness, the re-entry runs, or the week before.
-            Given your knee/hip history, that's the one signal that overrides everything else — and
-            it's stayed clear for three straight weeks now.
+            <b>No knee or hip signal</b> during or after the 8-miler — confirmed directly. Given the May injury came off
+            exactly this kind of long-run distance leap, that's the one signal that overrides all the green numbers, and
+            it's clear.
           </div>
         </div>
         <div class="insight">
-          <div class="insight-fw">Roche — "days off, no shame"</div>
+          <div class="insight-fw">Accountability — the caveat the data can't see</div>
           <div class="insight-body">
-            The Jul 27-30 illness gap and the deliberately skipped Friday shakeout both turned out to be
-            <b>correct calls, not lost time</b> — the clean HRV/sleep recovery by Aug 2 is the direct
-            payoff of not rushing back.
+            Every "you're fine" marker reads your aerobic and autonomic systems. <b>Connective tissue adapts slower and
+            shows on no graph</b> — and it's the exact system that failed in May. The leg-test passed on everything measurable;
+            that's why this week <b>consolidates 8mi rather than chasing more</b>. You banked the distance — now let the tissue catch up.
           </div>
         </div>
       </div>
 
       <div class="tips">
-        <p class="label">Coaching tips for next week (Aug 3-9)</p>
+        <p class="label">Coaching tips for this week (Aug 10-16)</p>
         <ul>
-          <li><b>Strength resumes</b> — Session A Monday, Session B Thursday. No more reason to leave it optional now the illness has cleared.</li>
-          <li><b>Saturday parkrun stays controlled</b> — ~140-150bpm, not a time attack. Phase 1's standing rule; the leash comes off in Phase 2.</li>
-          <li><b>Sunday long run steps to ~4.8mi</b>, HR ceiling 150-155bpm — a deliberate step above the strict 10% cap (+37% vs. last week's 3.51mi), agreed directly with Josh given strong readiness data. HR ceiling is the non-negotiable part, not the distance.</li>
-          <li><b>Tuesday's easy run is back</b> this week (~1.0mi shakeout) as part of the same agreed step-up.</li>
-          <li><b>Cap redesign coming next week</b> — Josh wants separate long-run vs. total-volume caps, and a fix for illness weeks fully resetting the ramp baseline. Not solved yet, flagged for the next `/plan-my-week`.</li>
+          <li><b>Tuesday is a full rest day</b> — the highest-recovery option after the 8-miler, with a race and long run stacked at the weekend. Move if you want, but no running.</li>
+          <li><b>Both strength sessions, no excuses</b> — Session A Wed AM, Session B Thu AM. B is the one you skipped last week, and it's the most knee-protective, in the exact stretch your volume is highest.</li>
+          <li><b>Race the parkrun Saturday</b> 🟢 — the leash is off. First honest read of race fitness in the block, and it could reset your aging 5K PB. Run it hard.</li>
+          <li><b>Sunday long run ~8mi, effort-capped and cuttable to 6</b> — it sits on legs that raced ~18h earlier, so effort is the boundary, not distance. No ego on the mileage; you already banked it Monday.</li>
         </ul>
       </div>
     </div>
@@ -475,17 +485,17 @@
         <div class="skill-desc">Race-day fueling &amp; pacing plan</div>
       </div>
       <div class="skill-tile">
-        <div class="skill-name">/regenerate-dashboard</div>
-        <div class="skill-desc">Rebuilds this snapshot</div>
-      </div>
-      <div class="skill-tile">
         <div class="skill-name">/time-predicter</div>
         <div class="skill-desc">Predicts your race finish time</div>
+      </div>
+      <div class="skill-tile">
+        <div class="skill-name">/regenerate-dashboard</div>
+        <div class="skill-desc">Rebuilds this snapshot</div>
       </div>
     </div>
   </div>
 
-  <footer>Snapshot generated 2 Aug 2026 from Garmin + training/ + reviews/ + races/ + health/ — regenerate to refresh the dashboard.</footer>
+  <footer>Snapshot generated 10 Aug 2026 from Garmin + training/ + reviews/ + races/ + health/ — regenerate to refresh the dashboard.</footer>
 </div>
 </body>
 </html>

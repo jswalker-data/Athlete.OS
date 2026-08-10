@@ -45,7 +45,7 @@ Note: original ask was 1:20:00. Reassessed against actual fitness data (21:40 pa
 - **Garmin VO2 max:** 57 (as of 2026-07-20), trending flat/slightly up over past 4-6 weeks. Garmin's algorithmic race predictions (e.g. 1:36:35 half) are built from this and limited data — treat as an optimistic ceiling, not a target, until backed by more race-pace evidence.
 
 ## Plan status
-Garmin is connected and is the live data source (activities, HR, sleep, steps, training load). Training plan active — see `training/plan.md` (built 2026-07-20, 10-week build to Ealing Half Marathon 2026-09-27). Current week: `training/2026-07-21-week.md`.
+Garmin is connected and is the live data source (activities, HR, sleep, steps, training load). Training plan active — see `training/plan.md` (**rebuilt v2 on 2026-08-10**: rebased off actual 8mi long run, long run peaks ~11.5mi, re-centred on race-pace/pacing discipline, uses the revised guardrails; supersedes the 2026-07-20 v1). Latest dossier: `races/2026-08-10-ealing-half-marathon-dossier.md`. Current week: `training/2026-08-10-week.md`.
 
 ## What this athlete wants from their coach
 - A full dedicated plan built on complete health context — sleep, steps, daily exertion, stress — not just logged activities/workouts
