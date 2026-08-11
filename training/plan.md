@@ -50,7 +50,7 @@ He's demonstrated ~15mi weeks and an 8mi long run with HRV rising and no joint p
 
 ## The build: phases (7 weeks to race day)
 
-| Phase | Week | Dates | Focus |
+| Phase | Weeks | Dates | Focus |
 |---|---|---|---|
 | 1. Aerobic Repair (hinge) | 1 | Aug 10-16 | Last base week. Consolidate 8mi; parkrun leash comes off as a pacing lab |
 | 2. Build | 2-4 | Aug 17 – Sep 6 | Race-pace discipline reintroduced (1 quality/week), long run climbs, fueling rehearsed. Pacing is the theme |
