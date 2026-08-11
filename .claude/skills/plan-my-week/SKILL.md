@@ -1,6 +1,6 @@
 ---
 name: plan-my-week
-description: Build Josh's coming training week — grounded in his actual recent Garmin data, his current training/plan.md phase, and real training science (polarized 80/20, hard/easy alternation, progressive overload, the 10% rule and its limits). Sequences sessions properly, holds volume to a safe increase, explains the "why" behind each key session, saves a dated file to training/, then walks Josh through it and asks what changed before he commits. Use when Josh asks to "plan my week", "plan this week", "what's this week look like", or runs /plan-my-week.
+description: Build Josh's coming training week — grounded in his actual recent Garmin data, his current training/plan.md phase, and real training science (polarized 80/20, hard/easy alternation, progressive overload, and Josh's revised volume guardrails — long run ≤ ~10% over the longest run in 3 weeks, weekly volume ≤ ~30% over the higher of the last 2 weeks). Sequences sessions properly, holds volume to a safe increase, explains the "why" behind each key session, saves a dated file to training/, then walks Josh through it and asks what changed before he commits. Use when Josh asks to "plan my week", "plan this week", "what's this week look like", or runs /plan-my-week.
 ---
 
 # /plan-my-week — build the coming training week
@@ -59,23 +59,30 @@ week sits in that wave (this plan currently runs roughly 3 build weeks to
 1 lighter week per phase). Don't stack another volume increase onto a
 week that's already supposed to be a cutback.
 
-**4. The 10% rule — real, but weaker evidence than its reputation.** The
-10%/week cap is a popular heuristic, but the evidence for it as a hard
-threshold is thin. One study of novice runners found injury-free runners
-averaged a 22% weekly increase — roughly double the "rule." Risk rises
-more clearly above ~30% increases than around 10-20%, and well-trained
-recreational runners may tolerate ~25% for short periods, while true
-novices are the group the conservative number actually protects.
+**4. The volume guardrails — two separate caps, revised 2026-08-10.** The
+old blanket 10%/week cap was a popular heuristic, but the evidence for it
+as a single hard threshold is thin. One study of novice runners found
+injury-free runners averaged a 22% weekly increase — roughly double the
+"rule." Risk rises more clearly above ~30% increases than around 10-20%,
+and well-trained recreational runners may tolerate ~25% for short periods.
+The *long run* is the specific injury mechanism, though (Josh's knee came
+off a single 13mi jump off a low base), which is why it keeps the tighter
+cap while total weekly volume gets more room.
 ([Outside: The Myth of the 10 Percent Rule](https://run.outsideonline.com/training/getting-started/myth-of-the-10-percent-rule/),
 [JOSPT: Excessive Progression in Weekly Running Distance](https://www.jospt.org/doi/10.2519/jospt.2014.5164),
 [PMC: Training Load and Running-Related Injuries systematic review](https://pmc.ncbi.nlm.nih.gov/articles/PMC6253751/))
-→ **Applied here:** CLAUDE.md's hard rule (never break the ~10% cap
-without saying why) stays in force regardless — Josh's injury came off a
-low base with an active knee/hip history, which is exactly the profile
-the conservative number is *for*, not a case for stretching it. Use this
-research only to explain *why* 10% is the number, and to know that if a
-week must come in under 10%, that's not overly cautious — it's the
-appropriate cap for this athlete, not a hedge to apologize for.
+→ **Applied here:** CLAUDE.md's hard rule (revised with Josh's coaches
+2026-08-10) is now two ceilings, both still hard — never breach either
+without saying why:
+- **Long run** ≤ ~10% over the longest single run in the last 3 weeks.
+- **Weekly volume** ≤ ~30% over whichever of the last 2 weeks was higher
+  (the max, so a single illness/down week doesn't collapse the baseline and
+  wipe out the ramp Josh already earned — this fixes the exact problem that
+  the old "10% off last actual 7 days" logic kept creating post-illness).
+These are safety ceilings, not targets; `plan.md`'s build should usually
+sit under them. Attribute runs to the training week they were meant for,
+not the strict calendar — a Monday long run can count toward the previous
+week (Sundays get busy).
 
 ## What Josh told us this shapes on top of the science
 
@@ -199,12 +206,17 @@ Use `garmin_mcp` for the last 14 days, minimum:
 - Stress (`get_stress_data` or `get_all_day_stress`).
 - Training load/status (`get_training_load_trend`, `get_training_status`).
 
-Compute **actual total running volume for the last 7 days** — this, not
-the plan's prescribed number, is the baseline the 10% cap applies to.
-If Josh ran less than prescribed, the cap applies to what he actually
-did, not what the plan wished he'd done — compounding a missed week's
-"planned" volume forward is exactly how the 10% rule gets silently
-broken.
+Compute the **actual** baselines the guardrails apply to, from real
+Garmin data — never the plan's prescribed numbers (compounding a missed
+week's "planned" volume forward is exactly how the guardrails get silently
+broken):
+- **Weekly-volume baseline** = the higher of the last 2 completed weeks'
+  actual total running volume (use the max, not the most recent — one
+  illness/down week must not drag the baseline down).
+- **Long-run baseline** = the longest single actual run in the last 3
+  weeks.
+Attribute runs to the training week they were meant for, not the strict
+calendar — if a long run landed Monday for the prior week, count it there.
 
 ### 3. Decide this week's quality-session count
 Apply the phase logic above. State the phase, state the count, state why
@@ -227,11 +239,14 @@ Sequencing rules, all non-negotiable:
   strength after).
 - Respect the 3-5 sessions/week comfortable range unless Josh says
   otherwise this week.
-- Total weekly volume ≤ last actual week's volume × 1.10, AND ≤ whatever
-  `plan.md`'s phase table prescribes for this week — take the lower of
-  the two. **If the 10% cap is the binding constraint and it's holding
-  the week below what `plan.md` wanted, say so explicitly** — this is
-  the CLAUDE.md hard rule in action, not a thing to bury in a table.
+- **Long run ≤ long-run baseline × 1.10** (longest run in the last 3
+  weeks), AND **total weekly volume ≤ weekly-volume baseline × 1.30**
+  (the higher of the last 2 weeks). Both are hard ceilings. Also keep
+  each ≤ whatever `plan.md`'s phase table prescribes — take the lower of
+  guardrail vs plan. `plan.md` should normally be the binding one, since
+  these ceilings sit above a sane build. **If a guardrail IS binding and
+  holding the week below what `plan.md` wanted, say so explicitly** — this
+  is the CLAUDE.md hard rule in action, not a thing to bury in a table.
 
 ### 5. Explain the key sessions
 For the long run, the quality session (if any), and anything unusual
@@ -248,8 +263,9 @@ is mid-review on; update it in place during the walkthrough conversation
 in step 7, don't fork a second file for the same week.
 
 Structure the file as: phase/week context, the day-by-day table, the
-"why" for key sessions, the 10%-cap note (even if it wasn't binding —
-say "not binding this week" so the rule is visibly still being checked),
+"why" for key sessions, the guardrail note — state both baselines
+(long-run and weekly-volume) and the resulting ceilings, even if neither
+was binding (say "not binding this week") so the rule is visibly checked,
 and anything flagged as open (e.g. the parkrun controlled-vs-race
 tension, a hill-route gap).
 

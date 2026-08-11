@@ -1,6 +1,6 @@
 # Athlete Profile
 
-_Last updated: 2026-07-20_
+_Last updated: 2026-08-10 (volume guardrails revised — see operating rule #4)_
 
 ## Sport
 Running only.
@@ -25,7 +25,7 @@ Note: original ask was 1:20:00. Reassessed against actual fitness data (21:40 pa
 - Comfortable range: 3-5 sessions/week
 
 ## Health & injury history
-- **Knee pain:** Ran 13 miles about a month ago (2026-06) off a low training base — caused significant knee pain, took ~2 weeks to return to running. Sign that mileage needs to build gradually (ties to the CLAUDE.md ~10%/week volume rule).
+- **Knee pain:** Ran **13.5mi on May 11, 2026** off a low training base — caused significant knee pain, took ~2 weeks to return to running. Sign that mileage needs to build gradually — and specifically that the long run is the risk mechanism, which is why the CLAUDE.md guardrails (revised 2026-08-10) cap the long run tighter (~10% over the longest run in 3 weeks) than total weekly volume (~30% over the higher of the last 2 weeks).
 - **Hips:** History of hip issues going back to younger years; still occasionally flares up now.
 - **Wants strength training built directly into the plan** (not bolted on) — specifically targeting knees and hips to support running volume.
 
@@ -45,7 +45,7 @@ Note: original ask was 1:20:00. Reassessed against actual fitness data (21:40 pa
 - **Garmin VO2 max:** 57 (as of 2026-07-20), trending flat/slightly up over past 4-6 weeks. Garmin's algorithmic race predictions (e.g. 1:36:35 half) are built from this and limited data — treat as an optimistic ceiling, not a target, until backed by more race-pace evidence.
 
 ## Plan status
-Garmin is connected and is the live data source (activities, HR, sleep, steps, training load). Training plan active — see `training/plan.md` (built 2026-07-20, 10-week build to Ealing Half Marathon 2026-09-27). Current week: `training/2026-07-21-week.md`.
+Garmin is connected and is the live data source (activities, HR, sleep, steps, training load). Training plan active — see `training/plan.md` (**rebuilt v2 on 2026-08-10**: rebased off actual 8mi long run, long run peaks ~11.5mi, re-centred on race-pace/pacing discipline, uses the revised guardrails; supersedes the 2026-07-20 v1). Latest dossier: `races/2026-08-10-ealing-half-marathon-dossier.md`. Current week: `training/2026-08-10-week.md`.
 
 ## What this athlete wants from their coach
 - A full dedicated plan built on complete health context — sleep, steps, daily exertion, stress — not just logged activities/workouts
@@ -82,7 +82,7 @@ Researched via primary sources (interviews, the coaches'/coach-adjacent physiolo
 1. **Pain in a joint = stop, no negotiation.** Formalized from the athlete's own instinct + Bakken's traffic-light principle. Breath/mental discomfort is fine to push through; joint pain is not.
 2. **A missed or reduced week is not a regression** — it gets named as recovery, not failure, per Roche. This is a deliberate counter to a specific, named risk (the "wasted week" spiral), not generic positivity.
 3. **Easy means Z2 (124-144 bpm), even when the pace looks slow.** Non-negotiable until the aerobic base closes the current HR/pace gap — earned aggression comes after this, not instead of it.
-4. **10%/week volume cap, van den Broek-style pace ranges, no race-specific intensity until the base is real** (per CLAUDE.md hard rule + van den Broek's periodization).
+4. **Volume guardrails (revised 2026-08-10), van den Broek-style pace ranges, no race-specific intensity until the base is real** (per CLAUDE.md hard rule + van den Broek's periodization). Two separate ceilings, not one blanket 10%: long run ≤ ~10% over the longest single run in the last 3 weeks; weekly volume ≤ ~30% over whichever of the last 2 weeks was higher (max, so an illness/down week doesn't reset the baseline). Week edges are flexible — a Monday long run can count toward the previous week.
 5. **Hard reps and hills are the reward, not the default** — channeled into specific, earned sessions once the aerobic base is solid, delivered with Skevington-style structure and confidence, not applied broadly across the week as "aggression."
 6. **Sleep is tracked as a first-class input alongside training load** — a rough sleep week changes the week's plan before mileage does.
 7. **Weekly structure and reasoning shown up front; daily session-level detail only on request** — matches how this athlete wants to work with a data-backed plan.
