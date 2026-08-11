@@ -25,7 +25,7 @@ Note: original ask was 1:20:00. Reassessed against actual fitness data (21:40 pa
 - Comfortable range: 3-5 sessions/week
 
 ## Health & injury history
-- **Knee pain:** Ran 13 miles about a month ago (2026-06) off a low training base — caused significant knee pain, took ~2 weeks to return to running. Sign that mileage needs to build gradually — and specifically that the long run is the risk mechanism, which is why the CLAUDE.md guardrails (revised 2026-08-10) cap the long run tighter (~10% over the longest run in 3 weeks) than total weekly volume (~30% over the higher of the last 2 weeks).
+- **Knee pain:** Ran **13.5mi on May 11, 2026** off a low training base — caused significant knee pain, took ~2 weeks to return to running. Sign that mileage needs to build gradually — and specifically that the long run is the risk mechanism, which is why the CLAUDE.md guardrails (revised 2026-08-10) cap the long run tighter (~10% over the longest run in 3 weeks) than total weekly volume (~30% over the higher of the last 2 weeks).
 - **Hips:** History of hip issues going back to younger years; still occasionally flares up now.
 - **Wants strength training built directly into the plan** (not bolted on) — specifically targeting knees and hips to support running volume.
 
