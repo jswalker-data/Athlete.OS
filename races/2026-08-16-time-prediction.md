@@ -10,7 +10,7 @@ _Built via /time-predicter | Target: 1:42:00 (locked 2026-07-20, re-confirmed 20
 | **If the race were run today** | **1:53:00** | 1:48-1:59 | ▲ from 1:54:00 |
 | **If plan.md (v2) is followed (realistic adherence)** | **1:49:00** | 1:44-1:57 | ↔ flat, range widened |
 
-**Mixed trajectory this cycle, and worth saying plainly:** the endurance/durability picture keeps improving (a second flat-under-Z2-ceiling long run, this one longer and run under harder conditions), but the pacing-discipline picture — now the #1 named limiter — got worse, not better, for the third straight week. Those two forces roughly cancel out. This is the honest read, not a "still trending up" story.
+**Mixed trajectory this cycle, and worth saying plainly:** the endurance/durability picture keeps improving (a second under-Z2-ceiling long run, this one longer and run under harder conditions), but the pacing-discipline picture — now the #1 named limiter — got worse, not better, for the third straight week. Those two forces roughly cancel out. This is the honest read, not a "still trending up" story.
 
 ## What changed since Aug 10 (why the numbers moved)
 
