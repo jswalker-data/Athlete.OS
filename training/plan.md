@@ -87,10 +87,10 @@ Both columns are **ceilings re-derived each week from real Garmin data** at `/pl
 | Wed | Rest, or optional easy Z2 shakeout if the week allows |
 | Thu | Strength (AM — Thursday-evening hard no) |
 | Fri | Rest |
-| Sat | Parkrun — **controlled** on weeks with a Tuesday quality session; **raced as an even/negative-split pacing lab** on weeks without one |
+| Sat | Parkrun — **always raced as a negative-split pacing lab** (standing decision, 2026-08-25 — see below) |
 | Sun | Long run, Z2, **controlled/negative-split finish** (race-pace segment in later weeks) |
 
-Reasoning: ~3 runs + 2 strength = 5 sessions (Josh's comfortable ceiling), with **one true hard effort per week** (Bakken hard/easy, Seiler ~80/20 by session). The 48-hour rule is protected by never stacking two hard efforts — if Tuesday is quality, Saturday's parkrun is controlled, and vice versa. The long run is Z2 *intensity* (long, not hard), so a controlled parkrun Saturday + long run Sunday is a legitimate back-to-back; a *raced* parkrun only pairs with a deliberately easy/cuttable Sunday long run.
+Reasoning: ~3 runs + 2 strength = 5 sessions (Josh's comfortable ceiling). **Parkrun is now a standing hard effort every week** (revised 2026-08-25, after `reviews/2026-08-17.md` showed Josh executing a genuine negative split rather than an uncontrolled blow-up) — so most weeks now carry **two genuinely hard efforts** (Tuesday quality + Saturday parkrun), not one. The 48-hour rule still governs: Tuesday to Saturday is comfortably >48h apart. The long run is Z2 *intensity* (long, not hard) with its own controlled/negative-split finish, so Saturday's pacing-lab parkrun + Sunday's long run remains a legitimate back-to-back, same as before.
 
 **Quality session menu (all built around the 1:42 target / anti-going-out-too-hot):**
 - **Race-pace (the priority):** goal-pace reps @ **7:47/mi**, growing across the block — e.g. 4×0.6mi (Wk2) → 3×1mi (Wk3-4) → 2×1.5mi (Wk5), short jog recovery. Trains pace *calibration* so race morning isn't the first time he feels 7:47/mi under control.
